@@ -1,20 +1,12 @@
+import pokemonList from "./conponents/pokemonIndex";
 import PokemonCard from "./PokemonCard.jsx";
 import "./App.css";
+import { useState } from "react";
 function App() {
-  const pokemonList = [
-    {
-      name: "bulbasaur",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-    {
-      name: "mew",
-    },
-  
-  ]
+const [count, setCount] = useState(0);
   return (
     <div>
-      <PokemonCard pokemon={pokemonList[0]}/>
+      <PokemonCard pokemon={pokemonList[count]} count ={count} setCount ={setCount}/>
 
     </div>
   );
